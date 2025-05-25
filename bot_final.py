@@ -111,7 +111,9 @@ def handle_response(update: Update, context: CallbackContext):
     send_question(update, context)
 
 def main():
-    TOKEN = "7176007857:AAE575mptuAX31y0V9GbDVmSJbrW6fGg-sc"  # <-- ВСТАВЬ СЮДА СВОЙ ТОКЕН
+    import os
+TOKEN = os.environ.get("TOKEN")
+  # <-- ВСТАВЬ СЮДА СВОЙ ТОКЕН
 
     updater = Updater(TOKEN, use_context=True)
     dp = updater.dispatcher
