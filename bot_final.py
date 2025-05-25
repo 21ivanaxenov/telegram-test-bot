@@ -51,29 +51,22 @@ def send_question(update: Update, context: CallbackContext):
     else:
         score = user_data[user_id]["score"]
         if score <= 3:
-            result = (
-                "```"
-"
-                "SYSTEM RESPONSE:
-"
-                "займись, чем-нибудь другим
-"
-                "а ха ха ха хахаха ахаха хахаха
-"
-                "```"
-            )
-            audio_file = "1.mp3"
-        else:
-            result = (
-                "```
-"
-                "SYSTEM RESPONSE:
-"
-                "Поздравляю! Ты звезда!
-"
-                "```"
-            )
-            audio_file = "2.mp3"
+    result = (
+        "```\n"
+        "SYSTEM RESPONSE:\n"
+        "займись, чем-нибудь другим\n"
+        "а ха ха ха хахаха ахаха хахаха\n"
+        "```"
+    )
+    audio_file = "1.mp3"
+else:
+    result = (
+        "```\n"
+        "SYSTEM RESPONSE:\n"
+        "ты звезда, в отличие от всех\n"
+        "```"
+    )
+    audio_file = "2.mp3"
 
         context.bot.send_message(chat_id=user_id, text="💾 Инициализация нейронных протоколов...")
         time.sleep(1.2)
