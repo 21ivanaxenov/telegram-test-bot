@@ -52,25 +52,18 @@ def send_question(update: Update, context: CallbackContext):
         score = user_data[user_id]["score"]
         if score <= 3:
             result = (
-                "```
-"
-                "SYSTEM RESPONSE:
-"
-                "Займись, чем-нибудь другим
-"
-                "а ха ха ха хахаха ахаха хахаха
-"
+                "```"
+                "SYSTEM RESPONSE:"
+                "Займись, чем-нибудь другим"
+                "а ха ха ха хахаха ахаха хахаха"
                 "```"
             )
             audio_file = "1.mp3"
         else:
             result = (
-                "```
-"
-                "SYSTEM RESPONSE:
-"
-                "Ты звезда, в отличие от всех
-"
+                "```"
+                "SYSTEM RESPONSE:"
+                "Ты звезда, в отличие от всех"
                 "```"
             )
             audio_file = "2.mp3"
