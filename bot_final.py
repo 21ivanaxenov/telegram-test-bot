@@ -52,7 +52,7 @@ def send_question(update: Update, context: CallbackContext):
         score = user_data[user_id]["score"]
         if score <= 3:
             result = (
-                "```
+                "```"
 "
                 "SYSTEM RESPONSE:
 "
